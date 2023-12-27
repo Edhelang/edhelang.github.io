@@ -230,7 +230,7 @@ const nsfwSettings = {
   username: "Anonymous",
 }
 
-const sfwSettings = {
+const hypnoSettings = {
   legend: [
     ['Not Entered', '#FFFFFF'],
     ['Favorite'   , '#6DB5FE'],
@@ -239,12 +239,12 @@ const sfwSettings = {
     ['Maybe'      , '#DB6C00'],
     ['No'         , '#920000'],
   ],
-  data: '$Preference List\n#Pizza\n(Toppings)\n* Pepperoni\n* Cheese\n* Mushrooms\n* Peppers\n* Hot peppers\n* Chicken\n* Ham\n* Corn\n* Pineapples\n\n#Ice Cream\n(Flavors)\n* Vanilla\n* Chocolate\n* Strawberry\n* Banana\n* Pistachio\n* Bubblegum\n* Watermelon\n\n#Soda\n(Flavors)\n* Orange\n* Lemon\n* Cola\n* Cherry\n* Mint',
+  data: '#Basics\n(General)\n* I drop very easily\n* I move or twitch a lot while under\n* I come out of trance easily\n* I am disoriented after coming back\n* I need a very safe environment\n* I experience amnesia after coming back\n* I am a very suggestible person\n#Safety and consent\n(General)\n* Trust\n* Unknown play partner\n* A lot of safety talk / triggers\n* Long pretalk\n* Very clear contract about what's going to happen\n* Less rapport/empathy\n* Post talk/Aftercare\n* Dropping without warning\n* People watching the trance\n* Triggers used without warning\n* Triggers used in public\n* Knowing what will happen before Trance\n* Making wishes beforehand\n* Clear consent before going under\n* Being shown off while hypnotized\n* Not deleting Triggers after a Session\n* Being told to come back up if necessary\n\n#Types Of Hypnosis\n(General)\n* Erotic hypnosis\n* Recreational hypnosis\n* BDSM components\n* D/S-Hypno stuff \n* Multiple hypnotists at once\n* Multiple subjects at once\n* Covert hypnosis\n\n#Preferences \n(General)\n* Watching others go under\n* Watching others hypnotize someone\n* Resistance\n* Brattiness\n* Long trance sessions\n* Drooling\n* Eye rolls\n* Being submissive\n* Receiving Dominance\n* Talking while under\n* Being surprised\n* Hypnotist doing whatever they want\n\n#Stimuli\n(General)\n* Auditory stimuli\n* Kinesthetic stimuli\n* Visual stimuli\n* Binaurals\n* Snapping fingers\n* Spirals\n* Pendulums\n* Shiny items\n* Crystals\n* Flashing light\n* Pocket watch\n* Metronome\n* Hand movements/signs\n\n#Inductions\n(General)\n* With slow speaking\n* With faster speech\n* With soothing voices\n* Confusion\n* Overload\n* Relaxation\n* Progressive muscle relaxation\n* Conversational\n* Mirroring\n* Visual Things\n* Auditory Things\n* Fractionation\n* Recall of last trance\n* Countdown\n* Focusing on something\n* Eye fixation\n* Instant inductions\n\n#Emotion Play\n(I enjoy feeling or making someone feel…)\n* Beautiful and sensuous\n* Emotionless and empty\n* Empowered and focused\n* Energized\n* Helpless\n* Naughty\n* Captive\n* Objectified\n* Impersonal\n* Detached\n* Aroused\n* Pleasure\n* Exploring fantasies\n* Safe and protected\n* Vulnerable\n* Fear\n* Degraded\n* Humiliated\n\n#Coming Out Of Trance\n(General)\n* Slow counts back up\n* Wake up trigger\n* Only counting to three or five\n* Just being told to come back or wake up\n\n#Suggestions 1\n(General)\n* Post hypnotic suggestions\n* Catalepsy\n* Immobilization \n* Levitation\n* Freeze / ‘Stop’ Triggers\n* Blank and empty\n* Amnesia\n* Mantras\n* Behavior modification\n* Personality play\n* Positive Hallucination\n* Negative Hallucination\n* Mind melting\n* Brainwashing\n* Mind controlling\n* Transformation\n* Pet play\n* Complete control\n* Big and little play\n* Surrendering\n* Submission\n* Drugging\n* Being playful\n* Being naughty\n* Captivity / helplessness\n* Power play\n* Passiveness\n* Orgasm trigger\n* Seduction\n* Touch-free pleasure\n* Touch-free orgasm\n\n#Suggestions 2\n(General)\n* Furry\n* Dollification\n* Robotization\n* Memory play\n* Objectification\n* Bimbofication\n* IQ Play\n* Rape play\n* BDSM\n* DS-Play\n* Consensual non consent\n* Blackmail\n* Watersports\n* Obedience\n* Pain triggers\n* Tease and release\n* Tease and denial\n* Edging\n* Covert D / S\n* Resistance Play\n* Indirect sexual description\n* Direct sexual description\n* Being guided\n* Getting attention\n* Being ordered to undress\n* Being ordered to masturbate\n* Being forced to do something',
   state: '',
   username: "Anonymous",
 }
 
-const defaultSettings = sfwSettings
+const defaultSettings = hypnoSettings
 
 
 class KinklistError extends Error {
@@ -1502,15 +1502,15 @@ class StorageHandler {
   constructor() {
     this.defaults = {
       imgurData: {},
-      presetDisplayNames: ["SFW", "NSFW"],
+      presetDisplayNames: ["Hypno", "NSFW"],
       //presetList: [/* Generated automatically below. */],
-      "--preset-sfw": sfwSettings.data,
-      "--legend-sfw": sfwSettings.legend,
-      "--state-sfw": sfwSettings.state,
+      "--preset-hypno": hypnoSettings.data,
+      "--legend-hypno": hypnoSettings.legend,
+      "--state-hypno": hypnoSettings.state,
       "--preset-nsfw": nsfwSettings.data,
       "--legend-nsfw": nsfwSettings.legend,
       "--state-nsfw": nsfwSettings.state,
-      currentPreset: "sfw",
+      currentPreset: "Hypno",
     };
     const presetList = this.defaults.presetDisplayNames
         .map(displayName => toCSSClassName(displayName));
