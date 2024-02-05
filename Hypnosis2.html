@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kinklist</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+        <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,...">
+        <style>
+            /* Your existing CSS styles */
+        </style>
+    </head>
+    <body>
+        <div class="widthWrapper">
+            <!-- Your existing HTML structure -->
+            <button id="Edit"></button>
+            <h1>Kink list</h1>
+            <!-- Other elements -->
+        </div>
+        <div id="EditOverlay" class="overlay">
+            <textarea id="Kinks"></textarea> <!-- Removed hardcoded content -->
+            <button id="KinksOK">Accept</button>
+        </div>
+        <!-- Other overlays and elements -->
+        
+        <script>
+            // Your existing JavaScript code
+
+            // Modified script to load kinks.txt from the "templates" subfolder
+            document.addEventListener('DOMContentLoaded', function() {
+                fetch('templates/kinks.txt') // Adjusted path for the subfolder location
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('Kinks').value = data;
+                })
+                .catch(error => console.error('Error loading the Kinks text:', error));
+            });
+        </script>
+    </body>
+</html>
